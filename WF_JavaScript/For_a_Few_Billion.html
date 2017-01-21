@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript">
+		"use strict"
+
+		function pennyCompunding(days) {
+			var moneyMade = 0.01;
+			for(var i=1; i <= days; i+=1) {
+				moneyMade = moneyMade + moneyMade;
+			}
+			return moneyMade;
+		}
+
+		/*Returns amount of days it takes to reach equal or greater to
+		x amount.*/
+		function howManyDays(amount) {
+			var days = 1;
+			
+			while(pennyCompunding(days) <= amount) {
+				days = days + 1;
+			}
+			return days;
+		}
+
+		console.log(pennyCompunding(30));
+		console.log(howManyDays(10000));
+		console.log(howManyDays(1000000000));
+		console.log(pennyCompunding(1031)); //days taken to reach Infinity
+	</script>
+</html>
