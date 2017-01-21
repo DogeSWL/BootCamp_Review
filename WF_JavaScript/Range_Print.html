@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript">
+		"use strict"
+
+		function printRange(start,end,skipAmount) {
+
+			//If user doesn't pass end point, make it start at 0, and end at the first
+			if(end == undefined) {
+				for(var i=0; i<start; i+=1) {
+					console.log(i);
+				}
+			} 
+			//If user doesn't pass skip amount, make it default to 1
+			else if(skipAmount == undefined) {
+				for(var i=start; i<end; i+=1) {
+					console.log(i)
+				}
+			}
+			//Take a start point, end point, and skip amount, print all numbers in range
+			else {
+				for(var i=start; i<end; i+=2) {
+					console.log(i);
+				}				
+			}
+		}
+
+		//Works for negative numbers
+		printRange(8,10,2);
+
+	</script>
+</html>
