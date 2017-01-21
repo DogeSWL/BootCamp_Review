@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript">
+		"use strict"
+
+		function slotGame(coin,keepCoin) {
+
+			var coinStat = coin-keepCoin;
+
+			while(coinStat>=0) {
+
+				//Generates chance of winning
+				var winChance = Math.floor((Math.random()*100)+1);
+				//Generates coins won
+				var coinWin = Math.floor((Math.random()*(100-50+1))+50);
+
+				if(coinStat===0) {
+					return 0;
+				} else {
+					//Reduces 1 coin as soon as loops start to emulate paying 1 coin for 1 slot game
+					coinStat-=1;
+					console.log((coinStat)+" coins left");
+				}
+
+				if(winChance>100){
+					return "You won "+(coinWin)+" coins. Having kept "+keepCoin+" coins, you now have "+(coinStat+keepCoin+coinWin)+" coins";
+				}
+			}
+		}
+
+		console.log(slotGame(50,5));
+
+	</script>
+</html>
