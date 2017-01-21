@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<script type="text/javascript">
+		"use strict"
+
+		function FancyArr(arr,symbStr,reversed) {
+			//If reversed parameter is true, print elements in reverse order
+			//If reversed parameter is not true, print elements in current order
+			if(reversed === true) {
+				for(var i=arr.length-1; i>=0; i-=1) {
+					console.log(i+" "+symbStr+" "+arr[i]);
+				}
+			} else {
+				for(var i=0; i<arr.length; i+=1) {
+					console.log(i+" "+symbStr+" "+arr[i]);
+				}				
+			}
+		}
+
+		FancyArr(["James", "Jill", "Jane", "Jack"], "->", true);
+
+	</script>
+</html>
