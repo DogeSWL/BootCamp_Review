@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript">
+    "use strict";
+
+    //Only accepts items that are numbers, returning in a new array
+    function numbersOnly(arr) {
+      var rtnArr = [];
+
+      for(var i=0; i<arr.length; i+=1) {
+        if(typeof arr[i] === "number") {
+          rtnArr.push(arr[i]);
+        }
+      }
+      return rtnArr;
+    }
+
+    //Instead of making a new array, removes items that are not numbers from current array
+    function numbersOnlyB(arr) {
+
+      for(var i=arr.length-1; i>=0; i-=1) {
+        if(typeof arr[i] !== "number") {
+          arr.splice(i,1);
+        }
+      }
+      return arr;
+    }
+
+    console.log(numbersOnly([1,"apple",-3,"orange",0.5]));
+    console.log(numbersOnlyB(["pie",1,"apple","duck",-3,"orange",0.5,"cheese"]));
+
+  </script>
+</html>
