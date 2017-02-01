@@ -6,7 +6,7 @@ $(document).ready(function() {
     permGrids.appendChild(innerDiv);
     innerDiv.innerHTML = "<img src='octobiwan.jpg'>";
   }
-  
+
   $('img').click(function() {
     $(this).hide();
   });
