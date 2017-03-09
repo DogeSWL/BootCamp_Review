@@ -26,7 +26,7 @@ def layered_Multi(arr):
 
     for i in arr:
         tempArr = []
-        
+
         while i > 0:
             tempArr.append(1)
             i = i-1
