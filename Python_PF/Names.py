@@ -28,7 +28,6 @@ def pTwo():
  for key, data in users.items():
      print key
      for index, name in enumerate(data):
-        #  print name['first_name'], name['last_name'], "-", len(name['first_name']+name['last_name'])
         print index+1,"-", name['first_name'],name['last_name'],"-",len(name['first_name']+name['last_name'])
 
 pTwo()
