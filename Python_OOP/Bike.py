@@ -1,3 +1,4 @@
+# Python 3
 class Bike(object):
     def __init__(self, price, max_speed):
         self.price = price
@@ -11,12 +12,15 @@ class Bike(object):
 
     def ride(self):
         self.miles += 10
+        return self
 
     def reverse(self):
         if (self.miles - 5) < 0:
             self.miles = 0
+            return self
         else:
             self.miles -= 5
+            return self
 
 # bikeA = Bike(200, 120)
 # bikeA.ride()
@@ -26,9 +30,5 @@ class Bike(object):
 # bikeA.displayInfo()
 
 bikeB = Bike(50, 80)
-bikeB.ride()
-bikeB.reverse()
-bikeB.reverse()
-bikeB.reverse()
-bikeB.reverse()
+bikeB.ride().reverse().ride()
 bikeB.displayInfo()
